@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Avaliação</title>
+</head>
+<body>
+    <container>
+        <h3>Avaliação</h3>
+        <form method="POST" action="login.php"  oninput="logistica.value=parseInt(qf.value)+parseInt(ap.value);qualidade.value=parseInt(sgq.value)+parseInt(qp.value)+parseInt(rq.value);igqf.value=(parseInt(qualidade.value)+parseInt(logistica.value))/2">
+            
+            <select name="fornecedor" id="fornecedor">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+            </select>
+            
+            <label>SGQ</label><br><input type="range" min="0" max="30" name="sgq" id="sgq"><br>
+            <label>QP</label><br><input type="range" min="0" max="35" name="qp" id="qp"><br>        
+            <label>RQ</label><br><input type="range" min="0" max="35" name="rq" id="rq"><br>
+            <label>Qualidade</label><br><output name="qualidade" for="sgq qp rq"></output><br>
+
+            <label>QF</label><br><input type="range" min="0" max="50" name="qf" id="qf"><br>
+            <label>AP</label><br><input type="range" min="0" max="50" name="ap" id="ap"><br>            
+            <label>Logistica</label><br><output name="logistica" for="qf ap"></output><br>       
+
+            <label>IGQF</label><br><output name="igqf" for="qualidade logistica"></output><br>
+
+            <input type="submit" value="Login" id="cadastrar" name="cadastrar">
+        </form>
+    </container>
+</body>
+</html>
