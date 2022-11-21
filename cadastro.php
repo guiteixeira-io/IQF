@@ -2,7 +2,7 @@
 
 $login = $_POST['login'];
 $senha = MD5($_POST['senha']);
-$connect = mysql_connect('localhost','mundo169','Ed$on192');
+$connect = mysql_connect('localhost:3306','mundo169','Ed$on192');
 $db = mysql_select_db('mundo169_iqf');
 $query_select = "SELECT login FROM sec_users WHERE login = '$login'";
 $select = mysql_query($query_select,$connect);

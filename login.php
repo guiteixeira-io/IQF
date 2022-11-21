@@ -2,8 +2,8 @@
 $login = $_POST['login'];
 $entrar = $_POST['entrar'];
 $senha = md5($_POST['senha']);
-$connect = mysql_connect('localhost','root','rjfq7324NEW');
-$db = mysql_select_db('iqf');
+$connect = mysql_connect('localhost:3306','root','rjfq7324NEW');
+$db = mysql_select_db('mundo169_iqf');
   if (isset($entrar)) {
 
     $verifica = mysql_query("SELECT * FROM usuarios WHERE login =
