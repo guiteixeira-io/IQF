@@ -2,9 +2,9 @@
 
 $login = $_POST['login'];
 $senha = MD5($_POST['senha']);
-$connect = mysql_connect('localhost','root','rjfq7324NEW');
-$db = mysql_select_db('iqf');
-$query_select = "SELECT login FROM usuarios WHERE login = '$login'";
+$connect = mysql_connect('localhost','mundo169','Ed$on192');
+$db = mysql_select_db('mundo169_iqf');
+$query_select = "SELECT login FROM sec_users WHERE login = '$login'";
 $select = mysql_query($query_select,$connect);
 $array = mysql_fetch_array($select);
 $logarray = $array['login'];
@@ -21,9 +21,8 @@ $logarray = $array['login'];
         alert('Esse login já existe');window.location.href='
         cadastro.html';</script>";
         die();
-
       }else{
-        $query = "INSERT INTO usuarios (login,senha) VALUES ('$login','$senha')";
+        $query = "INSERT INTO sec_users (login,pswd) VALUES ('$login','$senha')";
         $insert = mysql_query($query,$connect);
 
         if($insert){
